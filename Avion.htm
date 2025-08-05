@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en" class="page js-focus-visible" data-js-focus-visible="">
+	<head>
+		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1" />
+		<link rel="shortcut icon" href="https://live.verstaem.online/avion/favicon.ico" type="image/x-icon" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<meta name="theme-color" content="#111111" />
+		<title>Avion</title>
+		<link rel="preload" href="https://live.verstaem.online/avion/fonts/ClashDisplayMedium.woff2" as="font" type="font/woff2" crossorigin="" />
+		<link rel="preload" href="https://live.verstaem.online/avion/fonts/ClashDisplayRegular.woff2" as="font" type="font/woff2" crossorigin="" />
+		<link rel="preload" href="https://live.verstaem.online/avion/fonts/SatoshiRegular.woff2" as="font" type="font/woff2" crossorigin="" />
+		<link rel="stylesheet" href="Avion_files/swiper-bundle.min.css" />
+		<link rel="stylesheet" href="Avion_files/vendor.css" />
+		<link rel="stylesheet" href="Avion_files/main.css" />
+		<script src="Avion_files/swiper-bundle.min.js"></script>
+		<script defer="defer" src="Avion_files/main.js"></script>
+	</head>
+	<body class="page__body">
+		<svg style="display: none" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
+			<style>
+				:root &gt; svg {
+				      display: none;
+				    }
+				    :root &gt; svg:target {
+				      display: block;
+				    }
+			</style>
+			<svg viewBox="0 0 24 24" id="Caret" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M18 9l-6 7.5L6 9h12z"></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="Checkmark" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M10.5 16.06l-3.75-3.75 1.06-1.06 2.69 2.69 5.689-5.69 1.061 1.061-6.75 6.75z"></path>
+				<path d="M12 1.5a10.5 10.5 0 100 21 10.5 10.5 0 000-21zM12 21a9 9 0 110-18 9 9 0 010 18z"></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="Delivery" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M12 12H3v1.5h9V12zM9 8.25H1.5v1.5H9v-1.5z"></path>
+				<path
+					d="M22.44 12.455l-2.25-5.25a.749.749 0 00-.69-.455h-2.25v-1.5a.75.75 0 00-.75-.75h-12V6h11.25v9.417a2.992 2.992 0 00-1.393 1.833H9.643a3 3 0 100 1.5h4.714a2.985 2.985 0 005.786 0h1.607a.75.75 0 00.75-.75v-5.25a.747.747 0 00-.06-.295zM6.75 19.5a1.5 1.5 0 110-3 1.5 1.5 0 010 3zm10.5-11.25h1.756L20.613 12H17.25V8.25zm0 11.25a1.5 1.5 0 110-3 1.5 1.5 0 010 3zM21 17.25h-.857A2.996 2.996 0 0017.25 15v-1.5H21v3.75z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="avatar" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M12 6a3.75 3.75 0 100 7.5A3.75 3.75 0 0012 6zm0 6a2.25 2.25 0 110-4.5 2.25 2.25 0 010 4.5z"></path>
+				<path
+					d="M12 1.5A10.5 10.5 0 1022.5 12 10.512 10.512 0 0012 1.5zM7.5 19.782V18.75a2.253 2.253 0 012.25-2.25h4.5a2.253 2.253 0 012.25 2.25v1.032a8.924 8.924 0 01-9 0zm10.494-1.088A3.751 3.751 0 0014.25 15h-4.5a3.751 3.751 0 00-3.744 3.694 9 9 0 1111.988 0z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="cart" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M7.5 22.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm10.5 0a1.5 1.5 0 100-3 1.5 1.5 0 000 3zm3-17.25H4.365L3.75 2.1A.75.75 0 003 1.5H0V3h2.385L5.25 17.4A.75.75 0 006 18h13.5v-1.5H6.615L6 13.5h13.5a.75.75 0 00.75-.585l1.5-6.75A.751.751 0 0021 5.25zM18.9 12H5.715l-1.05-5.25h15.398L18.9 12z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 8 6" id="check" xmlns="http://www.w3.org/2000/svg"><path d="M1 3.074L2.95 5 7 1"></path></svg>
+			<svg viewBox="0 0 24 24" id="facebook" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M20.003 3H3.997A1.005 1.005 0 003 3.998v16.005a1.005 1.005 0 00.998.997h8.617v-6.96h-2.34v-2.722h2.34V9.315c0-2.325 1.418-3.592 3.502-3.592.698 0 1.395 0 2.093.104V8.25h-1.433c-1.132 0-1.35.54-1.35 1.328v1.732h2.7l-.352 2.723h-2.347V21h4.575a1.006 1.006 0 00.997-.997V3.997A1.005 1.005 0 0020.003 3z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="instagram" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M16.804 8.276a1.08 1.08 0 100-2.16 1.08 1.08 0 000 2.16zM12 7.378a4.622 4.622 0 100 9.244 4.622 4.622 0 000-9.244zM12 15a3 3 0 110-5.999A3 3 0 0112 15z"></path>
+				<path
+					d="M12 4.622c2.403 0 2.688.009 3.637.052.57.007 1.136.112 1.671.31a2.982 2.982 0 011.708 1.708c.198.535.303 1.1.31 1.671.043.95.052 1.234.052 3.637s-.009 2.688-.052 3.637a4.982 4.982 0 01-.31 1.671 2.98 2.98 0 01-1.708 1.708 4.98 4.98 0 01-1.671.31c-.95.043-1.234.052-3.637.052s-2.688-.009-3.637-.052a4.981 4.981 0 01-1.671-.31 2.981 2.981 0 01-1.708-1.708 4.982 4.982 0 01-.31-1.671c-.043-.95-.052-1.234-.052-3.637s.009-2.688.052-3.637c.007-.57.112-1.136.31-1.67a2.981 2.981 0 011.708-1.709 4.981 4.981 0 011.671-.31c.95-.043 1.234-.052 3.637-.052zM12 3c-2.444 0-2.75.01-3.71.054a6.605 6.605 0 00-2.185.419 4.602 4.602 0 00-2.633 2.632 6.605 6.605 0 00-.418 2.185C3.01 9.25 3 9.556 3 12s.01 2.75.054 3.71c.015.747.157 1.486.419 2.185a4.602 4.602 0 002.632 2.633c.7.262 1.438.403 2.185.418.96.044 1.266.054 3.71.054s2.75-.01 3.71-.054a6.608 6.608 0 002.185-.419 4.602 4.602 0 002.633-2.632c.262-.7.403-1.438.418-2.185.044-.96.054-1.266.054-3.71s-.01-2.75-.054-3.71a6.606 6.606 0 00-.419-2.185 4.603 4.603 0 00-2.632-2.632 6.605 6.605 0 00-2.185-.418C14.75 3.01 14.444 3 12 3z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="linkedin" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M19.65 3H4.35C3.6 3 3 3.6 3 4.275V19.65c0 .675.6 1.275 1.35 1.275h15.3c.75 0 1.35-.6 1.35-1.275V4.275C21 3.6 20.4 3 19.65 3zM8.325 18.3H5.7V9.75h2.625v8.55zM7.05 8.55a1.584 1.584 0 01-1.575-1.575c0-.9.675-1.575 1.575-1.575.825 0 1.575.675 1.575 1.575 0 .9-.75 1.575-1.575 1.575zm11.325 9.675H15.75v-4.2c0-.975 0-2.325-1.425-2.325s-1.575 1.125-1.575 2.175v4.275h-2.625v-8.4H12.6v1.125h.075c.375-.675 1.275-1.425 2.55-1.425 2.7 0 3.225 1.8 3.225 4.125v4.65h-.075z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="pinterest" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M12 1.5a10.5 10.5 0 00-3.825 20.25 9.93 9.93 0 010-3l1.238-5.25a3.788 3.788 0 01-.285-1.5c0-1.455.847-2.55 1.897-2.55a1.32 1.32 0 011.327 1.5c0 .9-.57 2.25-.87 3.495a1.5 1.5 0 001.56 1.898c1.86 0 3.3-1.973 3.3-4.808a4.147 4.147 0 00-4.387-4.275 4.545 4.545 0 00-4.74 4.56 4.065 4.065 0 00.75 2.393.33.33 0 01.075.3c-.082.33-.262 1.05-.292 1.192-.03.143-.158.232-.353.143-1.312-.616-2.13-2.528-2.13-4.073 0-3.308 2.408-6.353 6.938-6.353 3.637 0 6.472 2.596 6.472 6.068 0 3.615-2.25 6.525-5.453 6.525a2.821 2.821 0 01-2.407-1.2l-.652 2.497a11.66 11.66 0 01-1.305 2.753c1.02.301 2.079.448 3.142.435a10.5 10.5 0 100-21z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="purchase" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M21 4.5H3A1.5 1.5 0 001.5 6v12A1.5 1.5 0 003 19.5h18a1.5 1.5 0 001.5-1.5V6A1.5 1.5 0 0021 4.5zM21 6v2.25H3V6h18zM3 18V9.75h18V18H3z"></path>
+				<path d="M12 15H4.5v1.5H12V15z"></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="search" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path d="M21.75 20.69l-5.664-5.665a8.264 8.264 0 10-1.06 1.06l5.663 5.665 1.06-1.06zM3 9.75a6.75 6.75 0 116.75 6.75A6.758 6.758 0 013 9.75z"></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="skype" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M20.932 13.41A9.045 9.045 0 0010.59 3.067a5.468 5.468 0 00-7.5 7.5A8.832 8.832 0 002.956 12a9.045 9.045 0 0010.455 8.933 5.468 5.468 0 007.5-7.5l.022-.023zm-4.635 2.7a3.75 3.75 0 01-1.68 1.298 6.751 6.751 0 01-2.61.465A6.309 6.309 0 019 17.25a3.9 3.9 0 01-1.365-1.222 2.693 2.693 0 01-.525-1.5 1.02 1.02 0 01.322-.75 1.17 1.17 0 01.818-.278c.249-.005.491.08.682.24.21.196.371.437.473.705.13.313.296.61.495.885.198.254.456.455.75.585.4.172.833.251 1.267.233a3 3 0 001.755-.465 1.35 1.35 0 00.668-1.148 1.155 1.155 0 00-.353-.877 2.317 2.317 0 00-.937-.525c-.39-.128-.908-.255-1.56-.398-.75-.174-1.48-.42-2.183-.735a3.585 3.585 0 01-1.417-1.05 2.625 2.625 0 01-.525-1.657 2.737 2.737 0 01.555-1.68c.418-.52.974-.91 1.605-1.125A7.132 7.132 0 0112 6.128a6.472 6.472 0 011.942.262c.495.147.96.38 1.373.69.325.244.596.553.795.908.162.286.25.608.255.937a1.05 1.05 0 01-.323.75 1.073 1.073 0 01-.802.345.938.938 0 01-.668-.21 2.52 2.52 0 01-.487-.652 2.844 2.844 0 00-.788-.983 2.347 2.347 0 00-1.462-.345 2.73 2.73 0 00-1.5.375 1.08 1.08 0 00-.57.9.862.862 0 00.187.563c.15.173.334.313.54.412.22.114.452.204.69.27.24.068.63.165 1.178.293.69.15 1.305.315 1.867.495a5.68 5.68 0 011.425.66c.386.244.704.582.923.982a3 3 0 01.3 1.47 3.18 3.18 0 01-.578 1.86z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="sprout" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M18.75 1.5a8.257 8.257 0 00-7.684 5.268A5.246 5.246 0 006.75 4.5H4.5v2.25A5.256 5.256 0 009.75 12h.75v6.787a7.442 7.442 0 00-4.553 2.16l1.06 1.06a6.001 6.001 0 019.232.91l1.246-.834A7.486 7.486 0 0012 18.797V12h.75A8.26 8.26 0 0021 3.75V1.5h-2.25zm-9 9A3.754 3.754 0 016 6.75V6h.75a3.754 3.754 0 013.75 3.75v.75h-.75zm9.75-6.75a6.758 6.758 0 01-6.75 6.75H12v-.75A6.758 6.758 0 0118.75 3h.75v.75z"
+				></path>
+			</svg>
+			<svg viewBox="0 0 24 24" id="twitter" xmlns="http://www.w3.org/2000/svg">
+				<path d="M0 0h24v24H0z"></path>
+				<path
+					d="M8.94 18.705a9.57 9.57 0 009.63-9.63v-.443a7.05 7.05 0 001.68-1.747c-.618.27-1.273.45-1.942.532a3.42 3.42 0 001.5-1.875 6.668 6.668 0 01-2.145.825 3.39 3.39 0 00-5.776 3.083 9.592 9.592 0 01-6.975-3.533 3.382 3.382 0 001.05 4.5 3.353 3.353 0 01-1.5-.42v.038a3.398 3.398 0 002.663 3.338 3.397 3.397 0 01-1.5.06A3.383 3.383 0 008.76 15.75a6.788 6.788 0 01-4.207 1.5 7.333 7.333 0 01-.803-.067 9.578 9.578 0 005.19 1.5"
+				></path>
+			</svg>
+		</svg>
+		<div class="site-container">
+			<header class="header">
+				<div class="header__container container header__container--width">
+					<div class="header__top">
+						<div class="header__mob">
+							<button id="search-btn" class="header__search btn-svg btn-reset" aria-label="search page">
+								<svg class="svg-image" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+									<rect width="16" height="16" fill="white" style="mix-blend-mode: multiply"></rect>
+									<path
+										d="M14.5001 13.7929L10.7241 10.0169C11.6314 8.92758 12.0839 7.53038 11.9873 6.11596C11.8908 4.70153 11.2526 3.37879 10.2057 2.42288C9.15867 1.46698 7.78347 0.951515 6.36612 0.983723C4.94877 1.01593 3.5984 1.59333 2.59593 2.59581C1.59345 3.59828 1.01605 4.94865 0.983845 6.366C0.951637 7.78335 1.4671 9.15855 2.423 10.2055C3.37891 11.2525 4.70165 11.8907 6.11608 11.9872C7.5305 12.0838 8.9277 11.6313 10.017 10.7239L13.7931 14.5L14.5001 13.7929ZM2.00012 6.5C2.00012 5.60998 2.26404 4.73995 2.75851 3.99993C3.25297 3.25991 3.95578 2.68313 4.77804 2.34254C5.60031 2.00194 6.50511 1.91283 7.37802 2.08646C8.25094 2.2601 9.05276 2.68868 9.6821 3.31802C10.3114 3.94735 10.74 4.74918 10.9137 5.62209C11.0873 6.495 10.9982 7.3998 10.6576 8.22207C10.317 9.04434 9.7402 9.74714 9.00018 10.2416C8.26016 10.7361 7.39013 11 6.50012 11C5.30705 10.9987 4.16323 10.5241 3.3196 9.68052C2.47597 8.83689 2.00144 7.69306 2.00012 6.5Z"
+										fill="#2A254B"
+									></path>
+								</svg>
+							</button>
+							<div class="header__burger btn-svg btn-reset" id="burger" aria-label="Button burger for menu">
+                <div class="header__burger-line line1"></div>
+                <div class="header__burger-line line2"></div>
+                <div class="header__burger-line line3"></div>
+              </div>
+						</div>
+						<a href="#" class="header__logo link-reset text-24 link" aria-label="go to home page">Avion</a>
+						<div class="header__block">
+							<button class="header__basket btn-svg btn-reset" aria-label="Button for basket">
+								<svg class="svg-image" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<rect width="16" height="16" fill="white" style="mix-blend-mode: multiply"></rect>
+									<path d="M7.5 22.5C8.32843 22.5 9 21.8285 9 21C9 20.1716 8.32843 19.5 7.5 19.5C6.67157 19.5 6 20.1716 6 21C6 21.8285 6.67157 22.5 7.5 22.5Z"></path>
+									<path d="M18 22.5C18.8284 22.5 19.5 21.8285 19.5 21C19.5 20.1716 18.8284 19.5 18 19.5C17.1716 19.5 16.5 20.1716 16.5 21C16.5 21.8285 17.1716 22.5 18 22.5Z"></path>
+									<path
+										d="M21 5.25003H4.365L3.75 2.10003C3.71494 1.92807 3.62068 1.77386 3.48364 1.66423C3.3466 1.5546 3.17546 1.49649 3 1.50003H0V3.00003H2.385L5.25 17.4C5.28506 17.572 5.37932 17.7262 5.51636 17.8358C5.6534 17.9455 5.82454 18.0036 6 18H19.5V16.5H6.615L6 13.5H19.5C19.6734 13.5043 19.8429 13.4483 19.9796 13.3416C20.1163 13.235 20.2119 13.0842 20.25 12.915L21.75 6.16503C21.7751 6.05375 21.7745 5.9382 21.7483 5.82718C21.722 5.71616 21.6708 5.61259 21.5985 5.52436C21.5261 5.43613 21.4347 5.36556 21.3309 5.31802C21.2272 5.27048 21.114 5.24723 21 5.25003ZM18.9 12H5.715L4.665 6.75003H20.0625L18.9 12Z"
+									></path>
+								</svg>
+							</button>
+							<button class="header__profile btn-svg btn-reset" aria-label="Button for profile">
+								<svg class="svg-image" width="16" height="16" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+									<rect width="16" height="16" fill="white" style="mix-blend-mode: multiply"></rect>
+									<path
+										d="M12 6C11.2583 6 10.5333 6.21993 9.91662 6.63199C9.29993 7.04404 8.81928 7.62971 8.53546 8.31494C8.25163 9.00016 8.17736 9.75416 8.32206 10.4816C8.46675 11.209 8.82391 11.8772 9.34835 12.4017C9.8728 12.9261 10.541 13.2833 11.2684 13.4279C11.9958 13.5726 12.7498 13.4984 13.4351 13.2145C14.1203 12.9307 14.706 12.4501 15.118 11.8334C15.5301 11.2167 15.75 10.4917 15.75 9.75C15.75 8.75544 15.3549 7.80161 14.6517 7.09835C13.9484 6.39509 12.9946 6 12 6ZM12 12C11.555 12 11.12 11.868 10.75 11.6208C10.38 11.3736 10.0916 11.0222 9.92128 10.611C9.75098 10.1999 9.70642 9.7475 9.79324 9.31105C9.88005 8.87459 10.0943 8.47368 10.409 8.15901C10.7237 7.84434 11.1246 7.63005 11.5611 7.54323C11.9975 7.45642 12.4499 7.50097 12.861 7.67127C13.2722 7.84157 13.6236 8.12996 13.8708 8.49997C14.118 8.86998 14.25 9.30499 14.25 9.75C14.2493 10.3465 14.0121 10.9184 13.5903 11.3402C13.1684 11.7621 12.5965 11.9993 12 12Z"
+									></path>
+									<path
+										d="M12 1.5C9.9233 1.5 7.89323 2.11581 6.16652 3.26957C4.4398 4.42332 3.09399 6.0632 2.29927 7.98182C1.50455 9.90045 1.29661 12.0116 1.70176 14.0484C2.1069 16.0852 3.10693 17.9562 4.57538 19.4246C6.04383 20.8931 7.91476 21.8931 9.95156 22.2982C11.9884 22.7034 14.0996 22.4955 16.0182 21.7007C17.9368 20.906 19.5767 19.5602 20.7304 17.8335C21.8842 16.1068 22.5 14.0767 22.5 12C22.4969 9.21619 21.3896 6.5473 19.4212 4.57884C17.4527 2.61039 14.7838 1.50314 12 1.5ZM7.5 19.7824V18.75C7.50066 18.1535 7.73792 17.5815 8.15974 17.1597C8.58155 16.7379 9.15347 16.5007 9.75 16.5H14.25C14.8465 16.5007 15.4185 16.7379 15.8403 17.1597C16.2621 17.5815 16.4993 18.1535 16.5 18.75V19.7824C15.1344 20.5798 13.5814 21 12 21C10.4186 21 8.86563 20.5798 7.5 19.7824ZM17.9944 18.6944C17.9795 17.7105 17.5786 16.772 16.8782 16.0809C16.1778 15.3899 15.2339 15.0017 14.25 15H9.75C8.76608 15.0017 7.8222 15.3899 7.1218 16.0809C6.42139 16.772 6.02054 17.7105 6.00563 18.6944C4.64555 17.4799 3.68643 15.881 3.25526 14.1093C2.82408 12.3377 2.9412 10.4769 3.59111 8.77324C4.24101 7.06963 5.39304 5.6036 6.89466 4.56927C8.39627 3.53495 10.1766 2.98112 12 2.98112C13.8234 2.98112 15.6037 3.53495 17.1054 4.56927C18.607 5.6036 19.759 7.06963 20.4089 8.77324C21.0588 10.4769 21.1759 12.3377 20.7448 14.1093C20.3136 15.881 19.3545 17.4799 17.9944 18.6944Z"
+									></path>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div class="header__bottom">
+						<nav class="header__nav nav">
+							<ul class="nav__list list-reset">
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Plant pots</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Ceramics</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Tables</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Chairs</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Crockery</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Tableware</a></li>
+								<li class="nav__item"><a href="#" class="nav__link text-16 link-reset link">Cutlery</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+				<div class="burger-menu" id="burger-menu">
+					<nav class="burger-menu__nav">
+						<ul class="burger-menu__list list-reset">
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Plant pots</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Ceramics</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Tables</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Chairs</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Crockery</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Tableware</a></li>
+							<li class="burger-menu__item"><a href="#" class="burger-menu__link text-24 link-reset link">Cutlery</a></li>
+						</ul>
+					</nav>
+					<div class="burger-menu__right">
+						<picture>
+							<source srcset="Avion_files/6.webp 1x" type="image/webp" />
+							<img class="burger-menu__img" src="Avion_files/6_002.jpg" alt="Decorative image of a designer chair" width="500" height="300" />
+						</picture>
+					</div>
+					<button class="burger-menu__btn btn-reset" id="burger-close">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<rect width="24" height="24" fill="white" style="mix-blend-mode: multiply"></rect>
+							<path d="M18 7.05L16.95 6L12 10.95L7.05 6L6 7.05L10.95 12L6 16.95L7.05 18L12 13.05L16.95 18L18 16.95L13.05 12L18 7.05Z" fill="#2A254B"></path>
+						</svg>
+					</button>
+				</div>
+			</header>
+			<main class="main">
+				<section class="hero">
+					<div class="hero__container container">
+						<div class="hero__content">
+							<article class="hero__article">
+								<h1 class="hero__title text-32">The furniture brand for the future, with timeless designs</h1>
+								<a href="#" class="hero__btn btn btn-navy link-reset">View collection</a>
+								<p class="hero__text text-18">
+									A&nbsp;new era in&nbsp;eco friendly furniture with Avelon, the French luxury retail brand with nice fonts, tasteful colors and a&nbsp;beautiful way to display things digitally using modern web
+									technologies.
+								</p>
+							</article>
+							<picture class="hero__img">
+								<source srcset="Avion_files/1.webp 1x" type="image/webp" />
+								<img src="Avion_files/1_002.jpg" alt="Decorative image of a designer chair" width="520" height="585" />
+							</picture>
+						</div>
+					</div>
+				</section>
+				<section class="brand section">
+					<div class="brand__container container">
+						<h2 class="brand__title text-24">What makes our brand different</h2>
+						<ul class="brand__list list-reset">
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" fill="white" style="mix-blend-mode: multiply"></rect>
+											<path d="M12 12H3V13.5H12V12Z" fill="#2A254B"></path>
+											<path d="M9 8.25H1.5V9.75H9V8.25Z" fill="#2A254B"></path>
+											<path
+												d="M22.4392 12.4548L20.1892 7.2048C20.1315 7.06979 20.0355 6.95469 19.9129 6.87383C19.7904 6.79297 19.6468 6.74991 19.5 6.75H17.25V5.25C17.25 5.05109 17.171 4.86032 17.0303 4.71967C16.8897 4.57902 16.6989 4.5 16.5 4.5H4.5V6H15.75V15.4172C15.4083 15.6156 15.1092 15.8797 14.8701 16.1943C14.6309 16.5089 14.4564 16.8677 14.3566 17.25H9.64342C9.46088 16.543 9.02675 15.9269 8.42242 15.517C7.81809 15.1072 7.08504 14.9319 6.36067 15.0239C5.63631 15.1159 4.97038 15.4689 4.48768 16.0168C4.00499 16.5647 3.73869 17.2698 3.73869 18C3.73869 18.7302 4.00499 19.4353 4.48768 19.9832C4.97038 20.5311 5.63631 20.8841 6.36067 20.9761C7.08504 21.0681 7.81809 20.8928 8.42242 20.483C9.02675 20.0731 9.46088 19.457 9.64342 18.75H14.3566C14.5201 19.3933 14.8934 19.9638 15.4174 20.3712C15.9414 20.7787 16.5862 20.9999 17.25 20.9999C17.9138 20.9999 18.5586 20.7787 19.0826 20.3712C19.6066 19.9638 19.9799 19.3933 20.1434 18.75H21.75C21.9489 18.75 22.1397 18.671 22.2803 18.5303C22.421 18.3897 22.5 18.1989 22.5 18V12.75C22.5 12.6485 22.4793 12.548 22.4392 12.4548ZM6.75 19.5C6.45333 19.5 6.16332 19.412 5.91665 19.2472C5.66997 19.0824 5.47771 18.8481 5.36418 18.574C5.25065 18.2999 5.22094 17.9983 5.27882 17.7074C5.3367 17.4164 5.47956 17.1491 5.68934 16.9393C5.89912 16.7296 6.16639 16.5867 6.45736 16.5288C6.74834 16.4709 7.04994 16.5006 7.32403 16.6142C7.59811 16.7277 7.83238 16.92 7.9972 17.1666C8.16203 17.4133 8.25 17.7033 8.25 18C8.24954 18.3977 8.09136 18.779 7.81016 19.0602C7.52895 19.3414 7.14768 19.4995 6.75 19.5ZM17.25 8.25H19.0056L20.6129 12H17.25V8.25ZM17.25 19.5C16.9533 19.5 16.6633 19.412 16.4166 19.2472C16.17 19.0824 15.9777 18.8481 15.8642 18.574C15.7506 18.2999 15.7209 17.9983 15.7788 17.7074C15.8367 17.4164 15.9796 17.1491 16.1893 16.9393C16.3991 16.7296 16.6664 16.5867 16.9574 16.5288C17.2483 16.4709 17.5499 16.5006 17.824 16.6142C18.0981 16.7277 18.3324 16.92 18.4972 17.1666C18.662 17.4133 18.75 17.7033 18.75 18C18.7495 18.3977 18.5914 18.779 18.3102 19.0602C18.0289 19.3414 17.6477 19.4995 17.25 19.5ZM21 17.25H20.1434C19.9782 16.6076 19.6045 16.0382 19.0808 15.631C18.5572 15.2239 17.9133 15.0019 17.25 15V13.5H21V17.25Z"
+												fill="#2A254B"
+											></path>
+										</svg>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--fs text-20">Next day as&nbsp;standard</h3>
+										<p class="card__text card__text--fs text-16">Order before 3pm and get your order the next day as&nbsp;standard</p>
+									</div>
+								</article>
+							</li>
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" fill="white" style="mix-blend-mode: multiply"></rect>
+											<path d="M10.5 16.0605L6.75 12.3097L7.80976 11.25L10.5 13.9395L16.1888 8.25L17.25 9.31125L10.5 16.0605Z" fill="#2A254B"></path>
+											<path
+												d="M12 1.5C9.9233 1.5 7.89323 2.11581 6.16652 3.26957C4.4398 4.42332 3.09399 6.0632 2.29927 7.98182C1.50455 9.90045 1.29661 12.0116 1.70176 14.0484C2.1069 16.0852 3.10693 17.9562 4.57538 19.4246C6.04383 20.8931 7.91476 21.8931 9.95156 22.2982C11.9884 22.7034 14.0996 22.4955 16.0182 21.7007C17.9368 20.906 19.5767 19.5602 20.7304 17.8335C21.8842 16.1068 22.5 14.0767 22.5 12C22.5 9.21523 21.3938 6.54451 19.4246 4.57538C17.4555 2.60625 14.7848 1.5 12 1.5ZM12 21C10.22 21 8.47992 20.4722 6.99987 19.4832C5.51983 18.4943 4.36628 17.0887 3.68509 15.4442C3.0039 13.7996 2.82567 11.99 3.17294 10.2442C3.5202 8.49836 4.37737 6.89471 5.63604 5.63604C6.89472 4.37737 8.49836 3.5202 10.2442 3.17293C11.99 2.82567 13.7996 3.0039 15.4442 3.68508C17.0887 4.36627 18.4943 5.51983 19.4832 6.99987C20.4722 8.47991 21 10.22 21 12C21 14.3869 20.0518 16.6761 18.364 18.364C16.6761 20.0518 14.387 21 12 21Z"
+												fill="#2A254B"
+											></path>
+										</svg>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--fs text-20">Next day as&nbsp;standard</h3>
+										<p class="card__text card__text--fs text-16">Order before 3pm and get your order the next day as&nbsp;standard</p>
+									</div>
+								</article>
+							</li>
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" fill="white" style="mix-blend-mode: multiply"></rect>
+											<path
+												d="M21 4.5H3C2.60218 4.5 2.22064 4.65804 1.93934 4.93934C1.65804 5.22064 1.5 5.60218 1.5 6V18C1.5 18.3978 1.65804 18.7794 1.93934 19.0607C2.22064 19.342 2.60218 19.5 3 19.5H21C21.3978 19.5 21.7794 19.342 22.0607 19.0607C22.342 18.7794 22.5 18.3978 22.5 18V6C22.5 5.60218 22.342 5.22064 22.0607 4.93934C21.7794 4.65804 21.3978 4.5 21 4.5ZM21 6V8.25H3V6H21ZM3 18V9.75H21V18H3Z"
+												fill="#2A254B"
+											></path>
+											<path d="M12 15H4.5V16.5H12V15Z" fill="#2A254B"></path>
+										</svg>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--fs text-20">Next day as&nbsp;standard</h3>
+										<p class="card__text card__text--fs text-16">Order before 3pm and get your order the next day as&nbsp;standard</p>
+									</div>
+								</article>
+							</li>
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+											<rect width="24" height="24" fill="white" style="mix-blend-mode: multiply"></rect>
+											<path
+												d="M18.75 1.5C17.0878 1.50275 15.4651 2.00708 14.0942 2.94704C12.7232 3.887 11.6679 5.21881 11.0662 6.7683C10.5841 6.06903 9.93949 5.49727 9.18767 5.10216C8.43584 4.70705 7.59932 4.50041 6.75 4.5H4.5V6.75C4.50155 8.14191 5.05517 9.47637 6.0394 10.4606C7.02363 11.4448 8.35809 11.9985 9.75 12H10.5V18.787C8.7773 18.9554 7.16718 19.7191 5.94675 20.9465L7.00725 22.0071C7.63464 21.3798 8.39333 20.8995 9.22869 20.6006C10.064 20.3018 10.9553 20.192 11.8382 20.279C12.7211 20.3661 13.5737 20.6478 14.3347 21.104C15.0956 21.5602 15.7459 22.1794 16.2387 22.9172L17.4849 22.0826C16.8701 21.1638 16.0593 20.3926 15.111 19.8244C14.1626 19.2562 13.1002 18.9052 12 18.7965V12H12.75C14.9373 11.9975 17.0343 11.1275 18.5809 9.58089C20.1275 8.03425 20.9975 5.93727 21 3.75V1.5H18.75ZM9.75 10.5C8.75579 10.4989 7.80262 10.1034 7.0996 9.4004C6.39658 8.69738 6.00113 7.74421 6 6.75V6H6.75C7.74423 6.00107 8.69744 6.3965 9.40047 7.09953C10.1035 7.80256 10.4989 8.75577 10.5 9.75V10.5H9.75ZM19.5 3.75C19.498 5.5396 18.7862 7.25534 17.5208 8.52078C16.2553 9.78622 14.5396 10.498 12.75 10.5H12V9.75C12.002 7.9604 12.7138 6.24466 13.9792 4.97922C15.2447 3.71378 16.9604 3.00199 18.75 3H19.5V3.75Z"
+												fill="#2A254B"
+											></path>
+										</svg>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--fs text-20">Next day as&nbsp;standard</h3>
+										<p class="card__text card__text--fs text-16">Order before 3pm and get your order the next day as&nbsp;standard</p>
+									</div>
+								</article>
+							</li>
+						</ul>
+					</div>
+				</section>
+				<section class="new section">
+					<div class="new__container container">
+						<h2 class="new__title text-32">New ceramics</h2>
+						<ul class="new__list list-reset">
+							<li class="card card-new">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/1_002.webp 1x" type="image/webp" />
+											<img class="card__img" src="Avion_files/1.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Dandy chair</a></h3>
+										<span class="card__text text-18">£250</span>
+									</div>
+								</article>
+							</li>
+							<li class="card card-new">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/2.webp 1x" type="image/webp" />
+											<img class="card__img" src="Avion_files/2.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">Rustic Vase Set</a></h3>
+										<span class="card__text text-18">£155</span>
+									</div>
+								</article>
+							</li>
+							<li class="card card-new">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/3.webp 1x" type="image/webp" />
+											<img class="card__img" src="Avion_files/3.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Silky Vase</a></h3>
+										<span class="card__text text-18">£125</span>
+									</div>
+								</article>
+							</li>
+							<li class="card card-new">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/4.webp 1x" type="image/webp" />
+											<img class="card__img" src="Avion_files/4.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Lucy Lamp</a></h3>
+										<span class="card__text text-18">£399</span>
+									</div>
+								</article>
+							</li>
+						</ul>
+						<div class="new__bot"><a href="#" class="new__btn btn btn-reset btn-grey link-reset">View collection</a></div>
+					</div>
+				</section>
+				<section class="popular section">
+					<div class="popular__container container">
+						<h2 class="popular__title text-32">Our popular products</h2>
+						<ul class="popular__list list-reset">
+							<li class="card card--big">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/11.webp 1x" type="image/webp" />
+											<img class="card__img card__img--big" src="Avion_files/11.jpg" alt="Decorative image of a designer chair" width="630" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Poplar suede sofa</a></h3>
+										<span class="card__text text-18">£980</span>
+									</div>
+								</article>
+							</li>
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/1_002.webp 1x" type="image/webp" />
+											<img class="card__img card__img--width" src="Avion_files/1.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Dandy chair</a></h3>
+										<span class="card__text text-18">£250</span>
+									</div>
+								</article>
+							</li>
+							<li class="card">
+								<article class="card__article">
+									<div class="card__image">
+										<picture>
+											<source srcset="Avion_files/6_002.webp 1x" type="image/webp" />
+											<img class="card__img card__img--width" src="Avion_files/6.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+										</picture>
+									</div>
+									<div class="card__content">
+										<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Dandy chair</a></h3>
+										<span class="card__text text-18">£250</span>
+									</div>
+								</article>
+							</li>
+						</ul>
+						<div class="popular__swiper mySwiper swiper-initialized swiper-horizontal">
+							<ul class="popular__swiper-wrapper swiper-wrapper" style="transition-duration: 0ms; transition-delay: 0ms;" id="swiper-wrapper-6639104351ccb94100" aria-live="polite">
+								<li class="card swiper-slide">
+									<article class="card__article">
+										<div class="card__image">
+											<picture>
+												<source srcset="Avion_files/4.webp 1x" type="image/webp" />
+												<img class="card__img card__img--width" src="Avion_files/4.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+											</picture>
+										</div>
+										<div class="card__content">
+											<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Lucy Lamp</a></h3>
+											<span class="card__text text-18">£399</span>
+										</div>
+									</article>
+								</li>
+								<li class="card swiper-slide">
+									<article class="card__article">
+										<div class="card__image">
+											<picture>
+												<source srcset="Avion_files/2.webp 1x" type="image/webp" />
+												<img class="card__img card__img--width" src="Avion_files/2.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+											</picture>
+										</div>
+										<div class="card__content">
+											<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">Rustic Vase Set</a></h3>
+											<span class="card__text text-18">£155</span>
+										</div>
+									</article>
+								</li>
+								<li class="card swiper-slide">
+									<article class="card__article">
+										<div class="card__image">
+											<picture>
+												<source srcset="Avion_files/1_002.webp 1x" type="image/webp" />
+												<img class="card__img card__img--width" src="Avion_files/1.jpg" alt="Decorative image of a designer chair" width="305" height="375" />
+											</picture>
+										</div>
+										<div class="card__content">
+											<h3 class="card__title card__title--m"><a href="#" class="card__link link text-20 link-reset">The Dandy chair</a></h3>
+											<span class="card__text text-18">£250</span>
+										</div>
+									</article>
+								</li>
+							</ul>
+							<span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span>
+						</div>
+						<div class="popular__bot"><a href="#" class="popular__btn btn btn-reset btn-grey link-reset">View collection</a></div>
+					</div>
+				</section>
+				<section class="club section">
+					<div class="club__container container">
+						<h2 class="club__title text-36">Join the club and get the benefits</h2>
+						<p class="club__text text-16">Sign up&nbsp;for our newsletter and receive exclusive offers on&nbsp;new ranges, sales, pop up&nbsp;stores and more</p>
+						<form class="form form--widht" method="POST">
+							<label class="form__label"><input class="form__inp inp inp-primary" type="email" placeholder="your@email.com" /></label> <button class="form__btn btn btn-dark">Sign up</button>
+						</form>
+					</div>
+				</section>
+				<section class="studio section">
+					<div class="studio__container container">
+						<div class="studio__content">
+							<div class="studio__left">
+								<h2 class="studio__title text-24">From a&nbsp;studio in&nbsp;London to&nbsp;a&nbsp;global brand with over 400 outlets</h2>
+								<p class="studio__text text-16">When we&nbsp;started Avion, the idea was simple. Make high quality furniture affordable and available for the mass market.</p>
+								<p class="studio__text text-16">
+									Handmade, and lovingly crafted furniture and homeware is&nbsp;what we&nbsp;live, breathe and design so&nbsp;our Chelsea boutique become the hotbed for the London interior design community.
+								</p>
+								<button class="studio__btn btn btn-reset btn-grey">Get in&nbsp;touch</button>
+							</div>
+							<div class="studio__right">
+								<picture>
+									<source srcset="Avion_files/3_002.webp 1x" type="image/webp" />
+									<img class="studio__img" src="Avion_files/3_002.jpg" alt="Decorative image of a designer chair" width="720" />
+								</picture>
+							</div>
+						</div>
+					</div>
+				</section>
+			</main>
+			<footer class="footer">
+				<div class="footer__container container">
+					<div class="footer__top">
+						<div class="footer__left">
+							<nav class="footer__nav nav">
+								<div class="nav__block">
+									<h2 class="nav__title text-16">Menu</h2>
+									<ul class="nav__list nav__list--column list-reset list">
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">New arrivals</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Best sellers</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Recently viewed</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Popular this week</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">All products</a></li>
+									</ul>
+								</div>
+								<div class="nav__block">
+									<h2 class="nav__title text-16">Categories</h2>
+									<ul class="nav__list nav__list--column list-reset">
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Crockery</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Furniture</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Homeware</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Plant pots</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Chairs</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Crockery</a></li>
+									</ul>
+								</div>
+								<div class="nav__block">
+									<h2 class="nav__title text-16">Our company</h2>
+									<ul class="nav__list nav__list--column list-reset">
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link link">About us</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Vacancies</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Contact us</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Privacy</a></li>
+										<li class="nav__item"><a href="#" class="nav__link nav__link--white link-reset text-14 link">Returns policy</a></li>
+									</ul>
+								</div>
+							</nav>
+						</div>
+						<div class="footer__right">
+							<h2 class="footer__title text-16">Join our mailing list</h2>
+							<form class="footer__form form" method="POST">
+								<label class="form__label"><input class="form__inp inp inp-primary inp-foot" type="email" placeholder="your@email.com" /></label> <button class="form__btn btn btn-reset btn-grey">Sign up</button>
+							</form>
+						</div>
+					</div>
+					<div class="footer__bottom">
+						<span class="footer__span text-14">Copyright 2022 Avion LTD</span>
+						<ul class="footer__list-social list-reset">
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M16.65 0H1.35C0.6 0 0 0.6 0 1.275V16.65C0 17.325 0.6 17.925 1.35 17.925H16.65C17.4 17.925 18 17.325 18 16.65V1.275C18 0.6 17.4 0 16.65 0ZM5.325 15.3H2.7V6.75H5.325V15.3ZM4.05 5.55C3.225 5.55 2.475 4.875 2.475 3.975C2.475 3.075 3.15 2.4 4.05 2.4C4.875 2.4 5.625 3.075 5.625 3.975C5.625 4.875 4.875 5.55 4.05 5.55ZM15.375 15.225H12.75V11.025C12.75 10.05 12.75 8.7 11.325 8.7C9.9 8.7 9.75 9.825 9.75 10.875V15.15H7.125V6.75H9.6V7.875H9.675C10.05 7.2 10.95 6.45 12.225 6.45C14.925 6.45 15.45 8.25 15.45 10.575V15.225H15.375Z"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M17.0025 0H0.9975C0.733553 0.00196251 0.480974 0.107686 0.29433 0.29433C0.107686 0.480974 0.00196251 0.733553 0 0.9975V17.0025C0.00196251 17.2664 0.107686 17.519 0.29433 17.7057C0.480974 17.8923 0.733553 17.998 0.9975 18H9.615V11.04H7.275V8.3175H9.615V6.315C9.615 3.99 11.0325 2.7225 13.1175 2.7225C13.815 2.7225 14.5125 2.7225 15.21 2.8275V5.25H13.7775C12.645 5.25 12.4275 5.79 12.4275 6.5775V8.31H15.1275L14.775 11.0325H12.4275V18H17.0025C17.2664 17.998 17.519 17.8923 17.7057 17.7057C17.8923 17.519 17.998 17.2664 18 17.0025V0.9975C17.998 0.733553 17.8923 0.480974 17.7057 0.29433C17.519 0.107686 17.2664 0.00196251 17.0025 0Z"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M13.8042 5.2758C14.4007 5.2758 14.8842 4.79227 14.8842 4.1958C14.8842 3.59933 14.4007 3.1158 13.8042 3.1158C13.2077 3.1158 12.7242 3.59933 12.7242 4.1958C12.7242 4.79227 13.2077 5.2758 13.8042 5.2758Z"
+										></path>
+										<path
+											d="M9 4.37835C8.08592 4.37835 7.19237 4.64941 6.43235 5.15724C5.67232 5.66507 5.07995 6.38688 4.73015 7.23137C4.38035 8.07587 4.28883 9.00513 4.46715 9.90164C4.64548 10.7982 5.08565 11.6217 5.732 12.268C6.37835 12.9144 7.20185 13.3545 8.09836 13.5328C8.99487 13.7112 9.92413 13.6196 10.7686 13.2698C11.6131 12.92 12.3349 12.3277 12.8428 11.5677C13.3506 10.8076 13.6217 9.91408 13.6217 9C13.6217 7.77426 13.1347 6.59873 12.268 5.732C11.4013 4.86527 10.2257 4.37835 9 4.37835ZM9 12C8.40666 12 7.82664 11.8241 7.33329 11.4944C6.83994 11.1648 6.45542 10.6962 6.22836 10.1481C6.0013 9.59987 5.94189 8.99667 6.05764 8.41473C6.1734 7.83279 6.45912 7.29824 6.87868 6.87868C7.29824 6.45912 7.83279 6.1734 8.41473 6.05764C8.99667 5.94189 9.59987 6.0013 10.1481 6.22836C10.6962 6.45542 11.1648 6.83994 11.4944 7.33329C11.8241 7.82664 12 8.40666 12 9C12 9.79565 11.6839 10.5587 11.1213 11.1213C10.5587 11.6839 9.79565 12 9 12Z"
+										></path>
+										<path
+											d="M9 1.62165C11.4031 1.62165 11.6878 1.6308 12.6368 1.67415C13.2075 1.68094 13.7728 1.78577 14.308 1.98405C14.6961 2.13381 15.0486 2.36316 15.3428 2.65732C15.6369 2.95149 15.8663 3.30398 16.016 3.6921C16.2143 4.22731 16.3191 4.79261 16.3259 5.36333C16.3692 6.3123 16.3784 6.597 16.3784 9.00007C16.3784 11.4031 16.3693 11.6878 16.3259 12.6368C16.3191 13.2075 16.2143 13.7728 16.016 14.3081C15.8663 14.6962 15.6369 15.0487 15.3428 15.3428C15.0486 15.637 14.6961 15.8663 14.308 16.0161C13.7728 16.2144 13.2075 16.3192 12.6368 16.326C11.6879 16.3693 11.4033 16.3785 9 16.3785C6.5967 16.3785 6.31215 16.3694 5.36325 16.326C4.79253 16.3192 4.22723 16.2144 3.69202 16.0161C3.3039 15.8663 2.95142 15.637 2.65725 15.3428C2.36308 15.0487 2.13374 14.6962 1.98397 14.3081C1.78569 13.7728 1.68087 13.2075 1.67408 12.6368C1.6308 11.6878 1.62157 11.4031 1.62157 9.00007C1.62157 6.597 1.63072 6.3123 1.67408 5.36333C1.68087 4.79261 1.78569 4.22731 1.98397 3.6921C2.13373 3.30396 2.36307 2.95146 2.65724 2.65728C2.95141 2.3631 3.30389 2.13375 3.69202 1.98397C4.22723 1.78569 4.79253 1.68087 5.36325 1.67408C6.31222 1.6308 6.59693 1.62165 9 1.62165ZM9 0C6.55575 0 6.24922 0.0103499 5.2893 0.0541499C4.54279 0.0691372 3.80422 0.210592 3.105 0.4725C2.50705 0.703735 1.96401 1.05735 1.51068 1.51068C1.05735 1.96401 0.703735 2.50705 0.4725 3.105C0.210551 3.80434 0.0690949 4.54304 0.0541499 5.28968C0.0103499 6.24923 0 6.55575 0 9C0 11.4443 0.0103499 11.7508 0.0541499 12.7107C0.0691036 13.4573 0.210559 14.196 0.4725 14.8954C0.703735 15.4933 1.05735 16.0364 1.51068 16.4897C1.96401 16.943 2.50705 17.2966 3.105 17.5279C3.80434 17.7898 4.54304 17.9313 5.28968 17.9462C6.24923 17.9897 6.55575 18 9 18C11.4443 18 11.7508 17.9896 12.7107 17.9459C13.4573 17.9309 14.196 17.7894 14.8954 17.5275C15.4933 17.2963 16.0364 16.9426 16.4897 16.4893C16.943 16.036 17.2966 15.493 17.5279 14.895C17.7898 14.1957 17.9313 13.457 17.9462 12.7103C17.9897 11.7508 18 11.4443 18 9C18 6.55575 17.9896 6.24922 17.9459 5.2893C17.9309 4.54279 17.7894 3.80422 17.5275 3.105C17.2962 2.50712 16.9426 1.96415 16.4893 1.51089C16.0359 1.05763 15.4929 0.704069 14.895 0.472875C14.1957 0.210934 13.457 0.0694787 12.7103 0.054525C11.7508 0.01035 11.4443 0 9 0Z"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M18.9321 11.4102C19.0078 10.944 19.0454 10.4724 19.0446 10.0002C19.0446 7.60129 18.0917 5.30066 16.3954 3.60439C14.6992 1.90813 12.3985 0.955175 9.99965 0.955175C9.52738 0.954442 9.05583 0.992065 8.58965 1.06768C7.5442 0.441429 6.3195 0.182406 5.11002 0.331741C3.90054 0.481075 2.77563 1.0302 1.9139 1.89193C1.05218 2.75365 0.503047 3.87857 0.353713 5.08805C0.204379 6.29753 0.463401 7.52223 1.08965 8.56768C1.00527 9.04064 0.96012 9.51977 0.954647 10.0002C0.954647 12.3991 1.9076 14.6997 3.60387 16.396C5.30013 18.0922 7.60076 19.0452 9.99965 19.0452C10.4719 19.0459 10.9435 19.0083 11.4096 18.9327C12.4551 19.5589 13.6798 19.8179 14.8893 19.6686C16.0987 19.5193 17.2237 18.9701 18.0854 18.1084C18.9471 17.2467 19.4962 16.1218 19.6456 14.9123C19.7949 13.7028 19.5359 12.4781 18.9096 11.4327L18.9321 11.4102ZM14.2971 14.1102C13.8738 14.6955 13.2904 15.146 12.6171 15.4077C11.7864 15.7337 10.8993 15.8917 10.0071 15.8727C8.96867 15.9161 7.93554 15.7023 6.99965 15.2502C6.45401 14.9569 5.9861 14.5378 5.63465 14.0277C5.31271 13.5919 5.12974 13.0691 5.10965 12.5277C5.10886 12.3872 5.13709 12.2481 5.19259 12.119C5.24808 11.9899 5.32964 11.8737 5.43215 11.7777C5.65931 11.5843 5.95174 11.4851 6.24965 11.5002C6.49861 11.4955 6.74092 11.5807 6.93215 11.7402C7.14146 11.936 7.3031 12.1772 7.40465 12.4452C7.53477 12.7584 7.70088 13.0554 7.89965 13.3302C8.09775 13.5839 8.35535 13.7848 8.64965 13.9152C9.04939 14.0867 9.48256 14.1661 9.91715 14.1477C10.5361 14.1777 11.1492 14.0152 11.6721 13.6827C11.8728 13.5651 12.0397 13.3977 12.1567 13.1966C12.2736 12.9956 12.3367 12.7677 12.3396 12.5352C12.3461 12.3723 12.3181 12.2099 12.2573 12.0587C12.1966 11.9075 12.1045 11.7708 11.9871 11.6577C11.7201 11.4116 11.399 11.2318 11.0496 11.1327C10.6596 11.0052 10.1421 10.8777 9.48965 10.7352C8.74027 10.5607 8.0094 10.3146 7.30715 10.0002C6.75457 9.7737 6.26732 9.41278 5.88965 8.95018C5.53144 8.47336 5.34628 7.88877 5.36465 7.29268C5.35859 6.68668 5.55379 6.0958 5.91965 5.61267C6.33754 5.09349 6.89405 4.7034 7.52465 4.48767C8.322 4.22284 9.15988 4.10096 9.99965 4.12768C10.6567 4.11605 11.3117 4.20457 11.9421 4.39018C12.4369 4.53708 12.9016 4.77071 13.3146 5.08017C13.6397 5.3243 13.9104 5.63334 14.1096 5.98767C14.2718 6.2739 14.3595 6.59626 14.3646 6.92518C14.3637 7.06539 14.3347 7.20399 14.2793 7.3328C14.2239 7.46161 14.1433 7.57803 14.0421 7.67518C13.9401 7.78577 13.8159 7.87364 13.6776 7.93308C13.5394 7.99252 13.3901 8.02219 13.2396 8.02017C12.9984 8.03895 12.7592 7.9637 12.5721 7.81018C12.3753 7.62055 12.2107 7.40017 12.0846 7.15768C11.8989 6.77542 11.6298 6.43969 11.2971 6.17517C10.8606 5.90304 10.3468 5.78183 9.83465 5.83017C9.30896 5.80801 8.78806 5.93824 8.33465 6.20517C8.16995 6.29312 8.03086 6.42227 7.93096 6.58C7.83106 6.73774 7.77376 6.91869 7.76465 7.10518C7.75871 7.30894 7.82514 7.50822 7.95215 7.66768C8.10173 7.84099 8.28559 7.98144 8.49215 8.08017C8.71211 8.19396 8.94337 8.28446 9.18215 8.35018C9.42215 8.41768 9.81215 8.51517 10.3596 8.64268C11.0496 8.79268 11.6646 8.95768 12.2271 9.13768C12.7303 9.29096 13.2098 9.51307 13.6521 9.79768C14.038 10.0417 14.3554 10.3798 14.5746 10.7802C14.7975 11.2369 14.9008 11.7427 14.8746 12.2502C14.8814 12.9153 14.6794 13.5658 14.2971 14.1102Z"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 18 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M5.94 13.705C7.20685 13.713 8.46268 13.4693 9.63465 12.9882C10.8066 12.507 11.8714 11.798 12.7672 10.9022C13.663 10.0064 14.3721 8.9416 14.8532 7.76964C15.3343 6.59767 15.578 5.34184 15.57 4.07499C15.57 3.92499 15.57 3.78249 15.57 3.63249C16.2267 3.15136 16.7951 2.56012 17.25 1.88499C16.6316 2.15544 15.9773 2.3348 15.3075 2.41749C16.0177 1.99432 16.5506 1.32824 16.8075 0.542488C16.1456 0.939569 15.4199 1.21871 14.6625 1.36749C14.1524 0.824013 13.4775 0.46378 12.7421 0.342528C12.0067 0.221275 11.2518 0.345763 10.5943 0.696729C9.93678 1.04769 9.41324 1.60557 9.1047 2.28405C8.79617 2.96252 8.71983 3.72376 8.8875 4.44999C7.54202 4.38395 6.22553 4.03525 5.02377 3.42662C3.822 2.81798 2.7619 1.96305 1.9125 0.917488C1.48419 1.66087 1.35437 2.53923 1.54932 3.37473C1.74427 4.21023 2.24942 4.94043 2.9625 5.41749C2.43646 5.3972 1.92259 5.25332 1.4625 4.99749V5.03499C1.45783 5.81186 1.71954 6.56688 2.20403 7.17419C2.68851 7.78151 3.3665 8.20443 4.125 8.37249C3.63573 8.50408 3.12322 8.52458 2.625 8.43249C2.84459 9.09503 3.26376 9.67342 3.82503 10.0883C4.38631 10.5032 5.06219 10.7344 5.76 10.75C4.56691 11.7104 3.08407 12.239 1.5525 12.25C1.28396 12.2422 1.01606 12.2197 0.75 12.1825C2.30022 13.1702 4.1019 13.6909 5.94 13.6825"
+										></path>
+									</svg>
+								</a>
+							</li>
+							<li class="footer__item">
+								<a href="#" class="footer__link" aria-label="social media">
+									<svg class="svg-social" width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path
+											d="M10.9998 0.5C8.56549 0.516578 6.21257 1.37849 4.34356 2.93828C2.47455 4.49807 1.20559 6.65882 0.753754 9.05089C0.301919 11.443 0.695288 13.9177 1.86657 16.0518C3.03785 18.1858 4.91426 19.8466 7.1748 20.75C7.02287 19.7558 7.02287 18.7442 7.1748 17.75L8.4123 12.5C8.21646 12.0245 8.11949 11.5142 8.1273 11C8.1273 9.545 8.9748 8.45 10.0248 8.45C10.215 8.44714 10.4036 8.48543 10.5776 8.56224C10.7517 8.63906 10.9071 8.75258 11.0331 8.89504C11.1592 9.0375 11.253 9.20553 11.3081 9.38761C11.3632 9.5697 11.3783 9.76154 11.3523 9.95C11.3523 10.85 10.7823 12.2 10.4823 13.445C10.4177 13.6772 10.4101 13.9215 10.4599 14.1573C10.5098 14.3931 10.6157 14.6133 10.7688 14.7995C10.9218 14.9857 11.1175 15.1322 11.3391 15.2267C11.5608 15.3212 11.802 15.361 12.0423 15.3425C13.9023 15.3425 15.3423 13.37 15.3423 10.535C15.361 9.95891 15.2594 9.38525 15.044 8.85061C14.8287 8.31598 14.5042 7.8321 14.0914 7.42986C13.6786 7.02762 13.1864 6.71584 12.6464 6.51442C12.1063 6.31299 11.5302 6.22634 10.9548 6.26C10.3405 6.23361 9.72718 6.33216 9.15204 6.54966C8.5769 6.76717 8.05188 7.09912 7.60875 7.52542C7.16563 7.95172 6.81361 8.46351 6.57401 9.0298C6.33441 9.59609 6.21221 10.2051 6.2148 10.82C6.20646 11.6766 6.46895 12.5139 6.9648 13.2125C7.00086 13.2526 7.02654 13.3009 7.03962 13.3532C7.05269 13.4055 7.05275 13.4602 7.0398 13.5125C6.9573 13.8425 6.7773 14.5625 6.7473 14.705C6.7173 14.8475 6.5898 14.9375 6.3948 14.8475C5.0823 14.2325 4.2648 12.32 4.2648 10.775C4.2648 7.4675 6.6723 4.4225 11.2023 4.4225C14.8398 4.4225 17.6748 7.0175 17.6748 10.49C17.6748 14.105 15.4248 17.015 12.2223 17.015C11.7528 17.0313 11.2867 16.9301 10.8662 16.7206C10.4458 16.511 10.0844 16.1997 9.8148 15.815L9.1623 18.3125C8.84951 19.2831 8.41077 20.2085 7.8573 21.065C8.87714 21.3664 9.93644 21.513 10.9998 21.5C13.7846 21.5 16.4553 20.3938 18.4244 18.4246C20.3936 16.4555 21.4998 13.7848 21.4998 11C21.4998 8.21523 20.3936 5.54451 18.4244 3.57538C16.4553 1.60625 13.7846 0.5 10.9998 0.5Z"
+										></path>
+									</svg>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</body>
+</html>
